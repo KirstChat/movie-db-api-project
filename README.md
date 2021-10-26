@@ -4,6 +4,26 @@ This is a collaborative project that uses the [TMDB API](https://www.themoviedb.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Cloning the Repository
+
+To clone the repository and make a local copy on your computer, follow these steps:
+
+- Open [GitHub](https://github.com/) and locate the GitHub repository: [https://github.com/KirstChat/movie-db-api-project](https://github.com/KirstChat/movie-db-api-project)
+- Under the repository name, click **"Code"** and copy the link to clone the repository using **"HTTPS"**
+- After copying the link, open a terminal on your computer - this step can also be done in the terminal in your preferred IDE or Code Editor
+- Change the current working directory to the location where you want the cloned directory to be saved
+- Type `git clone`, and then paste the URL: [https://github.com/KirstChat/movie-db-api-project.git](https://github.com/KirstChat/movie-db-api-project.git)
+- Press Enter to create a local clone
+- Open the terminal and run `npm install` to install any dependencies required
+
+To add your own TMDB API Key, follow these steps:
+
+- Open [TMDB](https://www.themoviedb.org/) and sign up for an account
+- After signing up for account, open account settings which can be found under your profile
+- Open the API settings and request an API key (this is free to use)
+- In the repo, create an environment variable file: `.env.local`
+- Add the variable `REACT_APP_API_KEY='YOUR API KEY'`
+
 ## Available Scripts
 
 In the project directory, you can run:
