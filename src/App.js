@@ -1,5 +1,6 @@
 import SearchBar from './components/SearchBar';
 import Movies from './components/Movies';
+import Footer from './components/Footer';
 import axios from 'axios';
 import './App.css';
 import { useEffect, useState } from 'react';
@@ -23,6 +24,7 @@ const App = () => {
     <div>
       <SearchBar />
       <Movies movies={movies} />
+      <Footer />
     </div>
   );
 };
