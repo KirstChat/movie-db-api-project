@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const MovieItem = ({ movie: { title, poster_path, release_date } }) => {
   const IMG_PATH = 'https://image.tmdb.org/t/p/w500';
   return (
@@ -7,6 +9,10 @@ const MovieItem = ({ movie: { title, poster_path, release_date } }) => {
       <p>{release_date}</p>
     </div>
   );
+};
+
+MovieItem.propTypes = {
+  movie: PropTypes.object.isRequired,
 };
 
 export default MovieItem;

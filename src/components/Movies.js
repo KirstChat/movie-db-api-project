@@ -1,14 +1,7 @@
 import MovieItem from './MovieItem';
+import PropTypes from 'prop-types';
 
 const Movies = ({ movies }) => {
-  // const movies = [
-  //   {
-  //     id: '438631',
-  //     title: 'Dune',
-  //     poster_path: '/d5NXSklXo0qyIYkgV94XAgMIckC.jpg',
-  //     release_date: '2021-09-15',
-  //   },
-  // ];
   return (
     <div>
       {movies.map((movie) => (
@@ -16,6 +9,10 @@ const Movies = ({ movies }) => {
       ))}
     </div>
   );
+};
+
+Movies.propTypes = {
+  movies: PropTypes.array.isRequired,
 };
 
 export default Movies;
