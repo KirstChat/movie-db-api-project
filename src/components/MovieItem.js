@@ -6,7 +6,7 @@ const MovieItem = ({ movie: { title, poster_path, release_date } }) => {
     <div>
       <img src={IMG_PATH + poster_path} alt={title + ' Poster'} />
       <h3>{title}</h3>
-      <p>{release_date}</p>
+      <p>Released: {release_date}</p>
     </div>
   );
 };

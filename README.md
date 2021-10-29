@@ -14,7 +14,8 @@ To clone the repository and make a local copy on your computer, follow these ste
 - Change the current working directory to the location where you want the cloned directory to be saved
 - Type `git clone`, and then paste the URL: [https://github.com/KirstChat/movie-db-api-project.git](https://github.com/KirstChat/movie-db-api-project.git)
 - Press Enter to create a local clone
-- Open the terminal and run `npm install` to install any dependencies required
+- Open the terminal and run `npm install` to install required packages
+- If you are unable to install packages, download and install [Node.js](https://nodejs.org/en/)
 
 To add your own TMDB API Key, follow these steps:
 

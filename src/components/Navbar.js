@@ -1,28 +1,26 @@
+import Search from './Search';
 import PropTypes from 'prop-types';
 
-const SearchBar = ({ icon, title }) => {
+const Navbar = ({ icon, title }) => {
   return (
     <nav>
       <h1>
         <i className={icon} /> {title}
       </h1>
 
-      <form>
-        <input type='text' name='text' placeholder='Search Movies...' />
-        <input type='submit' />
-      </form>
+      <Search />
     </nav>
   );
 };
 
-SearchBar.defaultProps = {
+Navbar.defaultProps = {
   title: 'The Movie Database',
   icon: 'fas fa-film',
 };
 
-SearchBar.propTypes = {
+Navbar.propTypes = {
   title: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
 };
 
-export default SearchBar;
+export default Navbar;

@@ -1,4 +1,4 @@
-import SearchBar from './components/SearchBar';
+import Navbar from './components/Navbar';
 import Movies from './components/Movies';
 import Footer from './components/Footer';
 import axios from 'axios';
@@ -22,7 +22,7 @@ const App = () => {
 
   return (
     <div>
-      <SearchBar />
+      <Navbar />
       <Movies movies={movies} />
       <Footer />
     </div>
