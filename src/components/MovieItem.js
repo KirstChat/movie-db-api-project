@@ -1,3 +1,4 @@
+import './MovieItem.css';
 import PropTypes from 'prop-types';
 
 const MovieItem = ({ movie: { title, poster_path, release_date } }) => {
