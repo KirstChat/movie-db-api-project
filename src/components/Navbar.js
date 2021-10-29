@@ -1,15 +1,17 @@
 import Search from './Search';
+import './Navbar.css';
 import PropTypes from 'prop-types';
 
 const Navbar = ({ icon, title }) => {
   return (
-    <nav>
+    <header className='heading'>
       <h1>
         <i className={icon} /> {title}
       </h1>
-
-      <Search />
-    </nav>
+      <nav>
+        <Search />
+      </nav>
+    </header>
   );
 };
 

@@ -1,3 +1,4 @@
+import './Search.css';
 // import { useState } from 'react';
 
 const Search = () => {
@@ -8,10 +9,10 @@ const Search = () => {
   };
 
   return (
-    <div>
+    <div className='search'>
       <form onSubmit={handleSubmit}>
         <input type='text' name='text' placeholder='Search Movies...' />
-        <input type='submit' />
+        <input type='submit' value='Search' className='btn' />
       </form>
     </div>
   );

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const MovieItem = ({ movie: { title, poster_path, release_date } }) => {
-  const IMG_PATH = 'https://image.tmdb.org/t/p/w500';
+  const IMG_PATH = 'https://image.tmdb.org/t/p/w200';
   return (
     <div>
       <img src={IMG_PATH + poster_path} alt={title + ' Poster'} />

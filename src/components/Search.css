@@ -1,0 +1,18 @@
+.btn {
+  background: linear-gradient(
+    90deg,
+    rgba(1, 180, 228, 1) 0%,
+    rgba(144, 206, 161, 1) 100%
+  );
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--white);
+  padding: 0.5rem;
+}
+
+.search input[type='text'] {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
