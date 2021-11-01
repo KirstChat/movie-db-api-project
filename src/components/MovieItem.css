@@ -27,6 +27,7 @@
 
 .card:hover {
   transform: scale(1);
+  backface-visibility: hidden;
 }
 
 .card .vote-red {

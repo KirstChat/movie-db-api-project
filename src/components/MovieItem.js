@@ -1,7 +1,9 @@
 import './MovieItem.css';
 import PropTypes from 'prop-types';
 
-const MovieItem = ({ movie: { title, poster_path, vote_average } }) => {
+const MovieItem = ({
+  movie: { title, poster_path, vote_average, overview, release_date },
+}) => {
   const IMG_PATH = 'https://image.tmdb.org/t/p/w300';
 
   const voteAverageColor = () => {
@@ -18,7 +20,6 @@ const MovieItem = ({ movie: { title, poster_path, vote_average } }) => {
     <div className='card'>
       <img src={IMG_PATH + poster_path} alt={title + ' Poster'} />
       {voteAverageColor()}
-      {/* <span className='average vote-red'>{vote_average}</span> */}
     </div>
   );
 };
