@@ -1,13 +1,14 @@
 .btn {
   background: linear-gradient(
     90deg,
-    rgba(1, 180, 228, 1) 0%,
-    rgba(144, 206, 161, 1) 100%
+    var(--tertiary-color) 0%,
+    var(--secondary-color) 100%
   );
   border: none;
   border-radius: 0.5rem;
   color: var(--white);
   padding: 0.5rem;
+  cursor: pointer;
 }
 
 .search input[type='text'] {

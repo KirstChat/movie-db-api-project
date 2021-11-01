@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Movies = ({ movies }) => {
   return (
-    <main className='container__main'>
+    <main className='container'>
       <h3>Top 20 Trending Movies</h3>
       <div className='container__cards'>
         {movies.map((movie) => (

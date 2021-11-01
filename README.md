@@ -37,3 +37,4 @@ To add your own TMDB API Key, follow these steps:
 - [React Front to Back](https://www.udemy.com/course/modern-react-front-to-back/)
 - [How to use Axios with React](https://www.freecodecamp.org/news/how-to-use-axios-with-react/)
 - [Get Requests in React using Async/Await](https://dev.to/redeyemedia/get-requests-in-react-using-async-await-7jd)
+- [Text Gradient with Font Awesome](https://stackoverflow.com/questions/12732663/text-gradient-with-font-awesome)
