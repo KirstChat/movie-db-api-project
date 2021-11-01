@@ -1,29 +1,34 @@
 import Navbar from './components/Navbar';
 import Movies from './components/Movies';
 import Footer from './components/Footer';
-import axios from 'axios';
+// import axios from 'axios';
 import './App.css';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
+import useFetch from './components/useFetch';
 
 const App = () => {
-  const [movies, setMovies] = useState([]);
-  const [error, setError] = useState(null);
+  // const [movies, setMovies] = useState([]);
+  // const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const getMovies = async () => {
-      try {
-        const res = await axios.get(
-          `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${process.env.REACT_APP_API_KEY}`
-        );
-        setMovies(res.data.results);
-      } catch (err) {
-        setError(err.message);
-      }
-    };
-    getMovies();
-  }, []);
+  // useEffect(() => {
+  //   const getMovies = async () => {
+  //     try {
+  //       const res = await axios.get(
+  //         `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${process.env.REACT_APP_API_KEY}`
+  //       );
+  //       setMovies(res.data.results);
+  //     } catch (err) {
+  //       setError(err.message);
+  //     }
+  //   };
+  //   getMovies();
+  // }, []);
 
-  console.log(movies);
+  // console.log(movies);
+
+  const { movies, error } = useFetch(
+    `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${process.env.REACT_APP_API_KEY}`
+  );
 
   return (
     <div>
