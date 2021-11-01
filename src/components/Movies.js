@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 
 const Movies = ({ movies }) => {
   return (
-    <main className='container'>
+    <main className='container__main'>
       <h3>Top 20 Trending Movies</h3>
-      {movies.map((movie) => (
-        <MovieItem key={movie.id} movie={movie} />
-      ))}
+      <div className='container__cards'>
+        {movies.map((movie) => (
+          <MovieItem key={movie.id} movie={movie} />
+        ))}
+      </div>
     </main>
   );
 };
