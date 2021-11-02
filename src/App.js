@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Header from './Components/Header';
+import Movies from './Components/Movies';
 import './App.css';
 
 const App = () => {
@@ -16,7 +18,8 @@ console.log(movies)
 
   return (
     <div>
-      
+      <Header />
+      <Movies movies={movies} />
     </div>
   );
 }
