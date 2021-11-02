@@ -1,6 +1,7 @@
 .card {
   margin: 1rem;
   position: relative;
+  width: 250px;
   transform: scale(0.98);
   transition: transform 0.3s ease;
 }

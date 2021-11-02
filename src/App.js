@@ -4,7 +4,6 @@ import Footer from './components/Footer';
 import axios from 'axios';
 import './App.css';
 import { useEffect, useState } from 'react';
-// import useFetch from './components/useFetch';
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -24,15 +23,9 @@ const App = () => {
     getMovies();
   }, []);
 
-  console.log(movies);
-
-  // const { movies, error } = useFetch(
-  //   `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${process.env.REACT_APP_API_KEY}`
-  // );
-
   return (
     <div>
-      <Navbar />
+      <Navbar setMovies={setMovies} />
       <Movies movies={movies} error={error} />
       <Footer />
     </div>

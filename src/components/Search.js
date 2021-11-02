@@ -1,12 +1,14 @@
 import './Search.css';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const Search = ({ searchMovies }) => {
   const [text, setText] = useState('');
 
-  const handleSubmit = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
     searchMovies(text);
+    setText('');
   };
 
   const onChange = (e) => {
@@ -15,7 +17,7 @@ const Search = ({ searchMovies }) => {
 
   return (
     <div className='search'>
-      <form className='search__form' onSubmit={handleSubmit}>
+      <form className='search__form' onSubmit={onSubmit}>
         <input
           type='text'
           name='text'
@@ -27,6 +29,10 @@ const Search = ({ searchMovies }) => {
       </form>
     </div>
   );
+};
+
+Search.propTypes = {
+  searchMovies: PropTypes.func.isRequired,
 };
 
 export default Search;
