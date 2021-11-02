@@ -1,15 +1,19 @@
-import Search from './Search';
 import './Navbar.css';
+import Search from './Search';
 import PropTypes from 'prop-types';
 
 const Navbar = ({ icon, title }) => {
+  const searchMovies = (text) => {
+    console.log(text);
+  };
+
   return (
     <header className='heading'>
-      <h1>
+      <h1 className='heading__title'>
         <i className={icon} /> {title}
       </h1>
-      <nav>
-        <Search />
+      <nav className='heading__navbar'>
+        <Search searchMovies={searchMovies} />
       </nav>
     </header>
   );

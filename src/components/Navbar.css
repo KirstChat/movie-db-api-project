@@ -1,13 +1,18 @@
 .heading {
-  align-self: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem 2rem;
+  padding: 1.5rem 2rem;
 }
 
-.heading h1 i {
+.heading__title {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.heading__title i {
   background: linear-gradient(
     90deg,
     var(--tertiary-color) 0%,

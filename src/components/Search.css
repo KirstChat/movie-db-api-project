@@ -1,19 +1,27 @@
-.btn {
+.btn-gradient {
   background: linear-gradient(
     90deg,
     var(--tertiary-color) 0%,
     var(--secondary-color) 100%
   );
-  border: none;
-  border-radius: 0.5rem;
   color: var(--white);
-  padding: 0.5rem;
   cursor: pointer;
+  font-weight: 700;
 }
 
-.search input[type='text'] {
+.btn-gradient,
+.search__form input[type='text'] {
   border: none;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  margin-right: 0.5rem;
+  border-radius: 0.4rem;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.search__form input[type='text'] {
+  margin-right: 0.7rem;
+}
+
+.search__form input[type='text']:focus {
+  outline: 2px solid var(--tertiary-color);
 }
