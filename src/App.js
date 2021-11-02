@@ -1,4 +1,7 @@
-import './App.css';
+import React from 'react';
+import Header from "./Components/Header";
+import Movies from "./Components/Movies";
+import Footer from "./Components/Footer";
 
 function App() {
   const getData = async () => {
@@ -14,7 +17,9 @@ function App() {
 
   return (
     <div>
-      <h1>The Movie Database Project</h1>
+      <Header />
+      <Movies />
+      <Footer />
     </div>
   );
 }
