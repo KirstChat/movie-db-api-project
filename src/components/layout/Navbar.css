@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+.navbar__heading {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navbar__heading i {
+  background: linear-gradient(
+    90deg,
+    var(--tertiary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 0.5rem;
+}

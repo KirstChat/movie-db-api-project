@@ -1,22 +1,37 @@
+import Navbar from './components/layout/Navbar';
+import Movies from './components/movies/Movies';
+import Footer from './components/layout/Footer';
+import axios from 'axios';
 import './App.css';
+import { useEffect, useState } from 'react';
 
-function App() {
-  const getData = async () => {
-    const API_URL = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${process.env.REACT_APP_API_KEY}`;
+const App = () => {
+  const [movies, setMovies] = useState([]);
+  const [error, setError] = useState(null);
 
-    const res = await fetch(API_URL);
-    const data = await res.json();
-
-    console.log(data);
-  };
-
-  getData();
+  useEffect(() => {
+    const getMovies = async () => {
+      try {
+        const res = await axios.get(
+          `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}`
+        );
+        setMovies(res.data.results);
+      } catch (err) {
+        setError(`Oh no! Something went wrong: ${err.message}`);
+      }
+    };
+    getMovies();
+  }, []);
 
   return (
-    <div>
-      <h1>The Movie Database Project</h1>
+    <div className='App'>
+      <Navbar setMovies={setMovies} />
+      <div className='content'>
+        <Movies movies={movies} error={error} />
+      </div>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
