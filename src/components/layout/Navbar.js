@@ -1,6 +1,6 @@
 import './Navbar.css';
 import axios from 'axios';
-import Search from './Search';
+import Search from '../movies/Search';
 import PropTypes from 'prop-types';
 
 const Navbar = ({ icon, title, setMovies }) => {
@@ -12,8 +12,8 @@ const Navbar = ({ icon, title, setMovies }) => {
   };
 
   return (
-    <header className='heading'>
-      <h1 className='heading__title'>
+    <header className='navbar'>
+      <h1 className='navbar__heading'>
         <i className={icon} /> {title}
       </h1>
       <Search searchMovies={searchMovies} />

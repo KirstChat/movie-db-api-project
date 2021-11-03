@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 
 const Movies = ({ movies, error }) => {
   return (
-    <main className='container__main'>
+    <main className='container'>
       {!error ? (
-        <div className='cards'>
+        <div className='container__cards'>
           {movies.map((movie) => (
             <MovieItem key={movie.id} movie={movie} />
           ))}
         </div>
       ) : (
-        <div className='error-message'>{error}</div>
+        <div className='error'>{error}</div>
       )}
     </main>
   );

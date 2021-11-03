@@ -1,4 +1,4 @@
-.heading {
+.navbar {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -6,13 +6,13 @@
   padding: 1.5rem 2rem;
 }
 
-.heading__title {
+.navbar__heading {
   font-size: 1.6rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-.heading__title i {
+.navbar__heading i {
   background: linear-gradient(
     90deg,
     var(--tertiary-color) 0%,
