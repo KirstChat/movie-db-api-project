@@ -2,6 +2,7 @@ import './Navbar.css';
 import axios from 'axios';
 import Search from '../movies/Search';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ icon, title, setMovies }) => {
   const searchMovies = async (text) => {
@@ -13,9 +14,11 @@ const Navbar = ({ icon, title, setMovies }) => {
 
   return (
     <header className='navbar'>
-      <h1 className='navbar__heading'>
-        <i className={icon} /> {title}
-      </h1>
+      <Link to='/'>
+        <h1 className='navbar__heading'>
+          <i className={icon} /> {title}
+        </h1>
+      </Link>
       <Search searchMovies={searchMovies} />
     </header>
   );
