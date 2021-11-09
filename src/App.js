@@ -25,12 +25,20 @@ const App = () => {
     getMovies();
   }, []);
 
+  const searchMovieGenres = async (genreStr) => {
+    const res = await axios.get(
+        `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&&page=1&with_genres=${genreStr}`
+      );
+      setMovies(res.data.results);
+      console.log(genreStr);
+    }
+
 
   return (
     <div className='App'>
       <Navbar setMovies={setMovies} />
       <div className='content'>
-        <SearchFilters />
+        <SearchFilters searchMovieGenres={searchMovieGenres}/>
         <Movies movies={movies} error={error} />
       </div>
       <Footer />
