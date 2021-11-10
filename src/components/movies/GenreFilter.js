@@ -1,11 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import Select from 'react-select';
 import axios from 'axios';
-import './GenreFilters.css'
 
-const GenreFilter = ({setGenre}) => {
+const GenreFilter = ({setGenre, customStyles, animatedSelect}) => {
   const [genreList, setGenreList] = useState([]);
-
+  
   useEffect(() => {
     const getGenreList = async () => {
       const res = await axios.get(
@@ -16,7 +15,6 @@ const GenreFilter = ({setGenre}) => {
     getGenreList();
   }, [])
 
-  let genreStr='';
 
   const options= genreList.map(option => (
     {
@@ -27,11 +25,14 @@ const GenreFilter = ({setGenre}) => {
 
   return (
       <Select className="select-options"
+        styles={customStyles}
+        components={animatedSelect}
         isMulti
         isSearchable  
         autofocus
         onChange={setGenre} 
         options={options} 
+        placeholder="Choose genre..."
       />
   )
 }

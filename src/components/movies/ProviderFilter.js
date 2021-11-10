@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, {useEffect, useState} from 'react'
 import Select from 'react-select';
 
-const ProviderFilter = ({setProvider}) =>  {
+const ProviderFilter = ({setProvider, customStyles, animatedSelect}) =>  {
   const [providerList, setProviderList] = useState([]);
 
   useEffect(() => {
@@ -14,7 +14,6 @@ const ProviderFilter = ({setProvider}) =>  {
     }
     getProviderList();
   }, [])
-  console.log(providerList.length);
 
   const providerOptions = providerList.map(provider => (
     {
@@ -24,12 +23,15 @@ const ProviderFilter = ({setProvider}) =>  {
   ))
 
   return (
-    <Select 
+    <Select className="select-options"
        isMulti
         isSearchable  
         autofocus
+        styles={customStyles}
+        components={animatedSelect}
         onChange={setProvider} 
         options={providerOptions} 
+        placeholder="Select a streaming service..."
       />
   )
 }
