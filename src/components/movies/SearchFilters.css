@@ -1,9 +1,44 @@
-.filter-options{
+.filter-form{
   width: 75%;
-  margin: 0 auto;
   color: var(--primary-color);
+  padding: 2rem;
+  font-family: inherit;
+  border: 1px solid #aaa;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem;
+  border-radius: .5rem;
 }
+
+.select-options{
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.select-option:hover{
+  background-color: var(--primary-color);
+}
+
 
 .genre-select{
   color: var(--primary-color);
+}
+
+.btn-search{
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: #f1f1f1;
+  border-radius: .5rem;
+  width: 100%;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+input.btn.btn-search:hover {
+  background-color: var(--primary-color);
 }
