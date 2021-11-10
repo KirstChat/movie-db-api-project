@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from './Components/layout/Navbar';
-import Movies from './Components/movies/Movies';
-import SearchFilters from './Components/movies/SearchFilters';
-import Footer from './Components/layout/Footer';
+import Navbar from './components/layout/Navbar';
+import Movies from './components/movies/Movies';
+import SearchFilters from './components/movies/SearchFilters';
+import Footer from './components/layout/Footer';
 import axios from 'axios';
 import './App.css';
 import { useEffect, useState } from 'react';
