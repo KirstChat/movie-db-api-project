@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  width: 100vw;
+}
+
+.movie__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie__img {
+  width: 350px;
+}
+
+.movie__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 1.5rem;
+  width: 500px;
+}
+
+.movie__average {
+  display: flex;
+  align-items: center;
+  width: 100px;
+}
+
+.movie__average .average {
+  margin-left: 1rem;
+}
+
+.cast__container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.cast__details {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.cast__img {
+  height: 175px;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.cast__info {
+  width: 125px;
+}

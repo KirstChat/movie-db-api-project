@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [movie, setMovie] = useState({});
+  const [cast, setCast] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -35,6 +36,15 @@ const App = () => {
     setMovie(res.data);
   };
 
+  // Get Cast
+  const getCast = async (id) => {
+    const res = await axios.get(
+      `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}`
+    );
+
+    setCast(res.data.cast);
+  };
+
   return (
     <Router>
       <div className='App'>
@@ -51,7 +61,9 @@ const App = () => {
                 <Movie
                   {...props}
                   movie={movie}
+                  cast={cast}
                   getMovieDetails={getMovieDetails}
+                  getCast={getCast}
                 />
               )}
             />

@@ -8,8 +8,8 @@ const MovieItem = ({
   const IMG_PATH = 'https://image.tmdb.org/t/p/w500';
 
   const voteAverageColor = () => {
-    if (vote_count === 0) {
-      return <span className='average'>-</span>;
+    if (vote_average === 0 && vote_count === 0) {
+      return <span className='average'>--</span>;
     } else if (vote_average <= 4.9) {
       return <span className='average average-red'>{vote_average * 10}%</span>;
     } else if (vote_average <= 6.9) {

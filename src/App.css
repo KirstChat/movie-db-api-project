@@ -21,20 +21,42 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-.container {
+img {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.content {
   background-color: var(--white);
   color: var(--black);
-  padding: 1.5rem 0;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  padding: 0.5rem 0 1rem;
 }
 
-.container__details {
+/* -------- Vote Average ---------- */
+.average {
   display: flex;
-  padding: 1rem 2rem;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--grey-dark);
+  border-radius: 50%;
+  border: 2px solid var(--grey-light);
+  color: var(--white);
+  height: 55px;
+  width: 55px;
+  padding: 1rem;
 }
 
-.details {
-  margin: 0 2rem;
+.average-red {
+  border-color: #c01b1b;
+}
+
+.average-orange {
+  border-color: #eea812;
+}
+
+.average-green {
+  border-color: #4fd64f;
 }
