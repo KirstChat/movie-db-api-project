@@ -15,6 +15,7 @@ const App = () => {
   const [cast, setCast] = useState([]);
   const [error, setError] = useState(null);
 
+  // Set Top 20 Trending Movies
   useEffect(() => {
     const getMovies = async () => {
       try {

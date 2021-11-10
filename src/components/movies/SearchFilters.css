@@ -1,4 +1,4 @@
-.filter-form{
+.filter-form {
   width: 75%;
   color: var(--primary-color);
   padding: 2rem;
@@ -9,31 +9,30 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 1rem;
-  border-radius: .5rem;
+  margin: 0.7rem;
+  border-radius: 0.5rem;
 }
 
-.select-options{
+.select-options {
   padding-bottom: 2rem;
   width: 100%;
 }
 
-.select-option:hover{
+.select-option:hover {
   background-color: var(--primary-color);
 }
 
-
-.genre-select{
+.genre-select {
   color: var(--primary-color);
 }
 
-.btn-search{
+.btn-search {
   background: var(--secondary-color);
   border-color: var(--secondary-color);
   color: #f1f1f1;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   width: 100%;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
   font-weight: 700;
