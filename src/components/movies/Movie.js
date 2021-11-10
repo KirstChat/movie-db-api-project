@@ -1,5 +1,6 @@
 import './Movie.css';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Movie = ({ movie, getMovieDetails, cast, getCast, match }) => {
   useEffect(() => {
@@ -36,7 +37,9 @@ const Movie = ({ movie, getMovieDetails, cast, getCast, match }) => {
 
   return (
     <div className='container'>
-      <button className='btn-gradient btn-back'>&larr; Back</button>
+      <Link to='/' className='btn-gradient btn-back'>
+        &larr; Back
+      </Link>
       <div className='container__movie-details'>
         <img
           className='movie-details__img'
