@@ -34,8 +34,11 @@ To add your own TMDB API Key, follow these steps:
 
 - [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction)
 - [React Documentation](https://reactjs.org/docs/getting-started.html)
+- [react-select Documentation](https://react-select.com/home)
 - [React Front to Back](https://www.udemy.com/course/modern-react-front-to-back/)
 - [How to use Axios with React](https://www.freecodecamp.org/news/how-to-use-axios-with-react/)
 - [Get Requests in React using Async/Await](https://dev.to/redeyemedia/get-requests-in-react-using-async-await-7jd)
 - [Text Gradient with Font Awesome](https://stackoverflow.com/questions/12732663/text-gradient-with-font-awesome)
 - [useFetch Component](https://www.youtube.com/watch?v=j942wKiXFu8&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&index=1)
+-[SearchFilter Component](https://www.youtube.com/watch?v=n02t9wvd6hs)
+-[Importing Select options from API](https://medium.com/how-to-react/react-select-dropdown-tutorial-using-react-select-51664ab8b6f3)

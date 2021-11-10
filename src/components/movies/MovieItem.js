@@ -1,3 +1,4 @@
+import React from 'react';
 import './MovieItem.css';
 import PropTypes from 'prop-types';
 

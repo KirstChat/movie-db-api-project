@@ -1,3 +1,4 @@
+import React from 'react';
 import './Search.css';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
