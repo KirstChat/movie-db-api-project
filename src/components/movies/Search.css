@@ -1,14 +1,3 @@
-.btn-gradient {
-  background: linear-gradient(
-    90deg,
-    var(--tertiary-color) 0%,
-    var(--secondary-color) 100%
-  );
-  color: var(--white);
-  cursor: pointer;
-  font-weight: 700;
-}
-
 .btn-gradient,
 .search__form input[type='text'] {
   border: none;

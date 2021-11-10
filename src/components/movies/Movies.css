@@ -1,13 +1,4 @@
-.container {
-  background-color: var(--white);
-  color: var(--black);
-  padding: 1.5rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.container__cards {
+.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

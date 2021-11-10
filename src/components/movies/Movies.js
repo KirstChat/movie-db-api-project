@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 const Movies = ({ movies, error }) => {
   return (
-    <main className='container'>
+    <main>
       {!error ? (
-        <div className='container__cards'>
+        <div className='cards'>
           {movies.map((movie) => (
             <MovieItem key={movie.id} movie={movie} />
           ))}
