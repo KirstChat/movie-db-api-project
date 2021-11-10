@@ -36,38 +36,39 @@ const Movie = ({ movie, getMovieDetails, cast, getCast, match }) => {
 
   return (
     <div className='container'>
-      <div className='movie__container'>
+      <button className='btn-gradient btn-back'>&larr; Back</button>
+      <div className='container__movie-details'>
         <img
-          className='movie__img'
+          className='movie-details__img'
           src={IMG_PATH + movie.poster_path}
           alt={movie.title + ' Poster'}
         />
-        <div className='movie__details'>
+        <div className='movie-details'>
           <h2>{movie.title}</h2>
-          <div className='movie__average'>
-            <h4>User Score</h4>
-            {voteAverageColor()}
-          </div>
           <h4>Overview:</h4>
           <p>{movie.overview}</p>
           <h4>Released:</h4>
           <p>{movie.release_date}</p>
           <h4>Runtime:</h4>
           <p>{movie.runtime} Minutes</p>
+          <div className='movie-average'>
+            <h4>User Score</h4>
+            {voteAverageColor()}
+          </div>
         </div>
       </div>
 
-      <div className='cast__container'>
+      <div className='container__cast-details'>
         <h2>Top Billed Cast</h2>
-        <div className='cast__details'>
+        <div className='cast-details'>
           {topBilledCast.map((cast) => (
             <div key={cast.id} cast={cast}>
               <img
-                className='cast__img'
+                className='cast-details__img'
                 src={IMG_PATH + cast.profile_path}
                 alt={'Photo of ' + cast.name}
               />
-              <div className='cast__info'>
+              <div className='cast-details__text'>
                 <h4>{cast.name}</h4>
                 <p>{cast.character}</p>
               </div>
