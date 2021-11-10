@@ -1,6 +1,8 @@
-import Navbar from './components/layout/Navbar';
-import Movies from './components/movies/Movies';
-import Footer from './components/layout/Footer';
+import React from 'react';
+import Navbar from './Components/layout/Navbar';
+import Movies from './Components/movies/Movies';
+import SearchFilters from './Components/movies/SearchFilters';
+import Footer from './Components/layout/Footer';
 import axios from 'axios';
 import './App.css';
 import { useEffect, useState } from 'react';
@@ -23,10 +25,19 @@ const App = () => {
     getMovies();
   }, []);
 
+  const searchMovieGenres = async (genreStr, providerStr) => {
+    const res = await axios.get(
+        `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&&page=1&with_genres=${genreStr}&watch_region=GB&with_watch_providers=${providerStr}`
+      );
+      setMovies(res.data.results);
+    }
+
+
   return (
     <div className='App'>
       <Navbar setMovies={setMovies} />
       <div className='content'>
+        <SearchFilters searchMovieGenres={searchMovieGenres}/>
         <Movies movies={movies} error={error} />
       </div>
       <Footer />
