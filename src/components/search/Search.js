@@ -1,14 +1,17 @@
 import './Search.css';
+import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 const Search = ({ searchMovies }) => {
   const [text, setText] = useState('');
+  let history = useHistory();
 
   const onSubmit = (e) => {
     e.preventDefault();
     searchMovies(text);
     setText('');
+    history.push('/search');
   };
 
   const onChange = (e) => {

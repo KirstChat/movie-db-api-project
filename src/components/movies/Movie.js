@@ -1,5 +1,8 @@
 import './Movie.css';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import voteAverageColor from '../Utils';
+import PropTypes from 'prop-types';
 
 const Movie = ({ movie, getMovieDetails, cast, getCast, match }) => {
   useEffect(() => {
@@ -10,37 +13,21 @@ const Movie = ({ movie, getMovieDetails, cast, getCast, match }) => {
 
   const IMG_PATH = 'https://image.tmdb.org/t/p/w500';
 
-  const voteAverageColor = () => {
-    if (movie.vote_count === 0) {
-      return <span className='average'>--</span>;
-    } else if (movie.vote_average <= 4.9) {
-      return (
-        <span className='average average-red'>{movie.vote_average * 10}%</span>
-      );
-    } else if (movie.vote_average <= 6.9) {
-      return (
-        <span className='average average-orange'>
-          {movie.vote_average * 10}%
-        </span>
-      );
-    } else {
-      return (
-        <span className='average average-green'>
-          {movie.vote_average * 10}%
-        </span>
-      );
-    }
-  };
-
   const topBilledCast = cast.slice(0, 6);
 
   return (
     <div className='container'>
-      <button className='btn-gradient btn-back'>&larr; Back</button>
+      <Link to='/' className='btn-gradient btn-back'>
+        &larr; Back
+      </Link>
       <div className='container__movie-details'>
         <img
           className='movie-details__img'
-          src={IMG_PATH + movie.poster_path}
+          src={
+            movie.poster_path
+              ? IMG_PATH + movie.poster_path
+              : 'https://via.placeholder.com/280x420?text=No+Image+Found'
+          }
           alt={movie.title + ' Poster'}
         />
         <div className='movie-details'>
@@ -53,7 +40,7 @@ const Movie = ({ movie, getMovieDetails, cast, getCast, match }) => {
           <p>{movie.runtime} Minutes</p>
           <div className='movie-average'>
             <h4>User Score</h4>
-            {voteAverageColor()}
+            {voteAverageColor(movie.vote_average, movie.vote_count)}
           </div>
         </div>
       </div>
@@ -65,7 +52,11 @@ const Movie = ({ movie, getMovieDetails, cast, getCast, match }) => {
             <div key={cast.id} cast={cast}>
               <img
                 className='cast-details__img'
-                src={IMG_PATH + cast.profile_path}
+                src={
+                  cast.profile_path
+                    ? IMG_PATH + cast.profile_path
+                    : 'https://via.placeholder.com/280x420?text=No+Image+Found'
+                }
                 alt={'Photo of ' + cast.name}
               />
               <div className='cast-details__text'>
@@ -78,6 +69,13 @@ const Movie = ({ movie, getMovieDetails, cast, getCast, match }) => {
       </div>
     </div>
   );
+};
+
+Movie.propTypes = {
+  movie: PropTypes.object.isRequired,
+  getMovieDetails: PropTypes.func.isRequired,
+  cast: PropTypes.array.isRequired,
+  getCast: PropTypes.func.isRequired,
 };
 
 export default Movie;

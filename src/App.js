@@ -2,7 +2,8 @@ import React from 'react';
 import Navbar from './components/layout/Navbar';
 import Movies from './components/movies/Movies';
 import Movie from './components/movies/Movie';
-import SearchFilters from './components/movies/SearchFilters';
+import SearchResults from './components/search/SearchResults';
+import SearchFilters from './components/search/SearchFilters';
 import Footer from './components/layout/Footer';
 import axios from 'axios';
 import './App.css';
@@ -13,18 +14,15 @@ const App = () => {
   const [movies, setMovies] = useState([]);
   const [movie, setMovie] = useState({});
   const [cast, setCast] = useState([]);
-  const [error, setError] = useState(null);
+  const [searchResults, setSearchResults] = useState([]);
 
+  // Set Top 20 Trending Movies on Load
   useEffect(() => {
     const getMovies = async () => {
-      try {
-        const res = await axios.get(
-          `https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.REACT_APP_API_KEY}`
-        );
-        setMovies(res.data.results);
-      } catch (err) {
-        setError(`Oh no! Something went wrong: ${err.message}`);
-      }
+      const res = await axios.get(
+        `https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.REACT_APP_API_KEY}`
+      );
+      setMovies(res.data.results);
     };
     getMovies();
   }, []);
@@ -38,7 +36,7 @@ const App = () => {
     setMovie(res.data);
   };
 
-  // Get Cast
+  // Get Cast Details
   const getCast = async (id) => {
     const res = await axios.get(
       `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}`
@@ -47,24 +45,32 @@ const App = () => {
     setCast(res.data.cast);
   };
 
-  // Movie Genres
+  // Filter Movie
   const searchMovieGenres = async (genreStr, providerStr, certificationStr) => {
     const res = await axios.get(
       `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&&page=1&with_genres=${genreStr}&watch_region=GB&with_watch_providers=${providerStr}&certification=${certificationStr}`
     );
+
     setMovies(res.data.results);
   };
 
   return (
     <Router>
       <div className='App'>
-        <Navbar setMovies={setMovies} />
+        <Navbar setSearchResults={setSearchResults} />
         <main className='content'>
           <Switch>
             <Route exact path='/'>
               <SearchFilters searchMovieGenres={searchMovieGenres} />
-              <Movies movies={movies} error={error} />
+              <Movies movies={movies} />
             </Route>
+            <Route
+              exact
+              path='/search'
+              render={(props) => (
+                <SearchResults {...props} searchResults={searchResults} />
+              )}
+            />
             <Route
               exact
               path='/movie/:id'
