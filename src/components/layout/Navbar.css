@@ -6,6 +6,11 @@
   padding: 1.5rem 2rem;
 }
 
+.navbar a {
+  color: var(--white);
+  text-decoration: none;
+}
+
 .navbar__heading {
   font-size: 1.6rem;
   letter-spacing: 1px;

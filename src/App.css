@@ -4,7 +4,8 @@
   --tertiary-color: #90cea1;
 
   --white: #fff;
-  --grey: #333;
+  --grey-light: #999;
+  --grey-dark: #333;
   --black: #000;
 }
 
@@ -20,7 +21,61 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+img {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
 .content {
-  display: flex;
   background-color: var(--white);
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.btn-gradient {
+  background: linear-gradient(
+    90deg,
+    var(--tertiary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 700;
+  transform: scale(0.98);
+}
+
+.btn-gradient:hover,
+.btn-gradient:active {
+  background: var(--secondary-color);
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+/* -------- Vote Average ---------- */
+.average {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--grey-dark);
+  border-radius: 50%;
+  border: 2px solid var(--grey-light);
+  color: var(--white);
+  height: 55px;
+  width: 55px;
+  padding: 1rem;
+}
+
+.average-red {
+  border-color: #c01b1b;
+}
+
+.average-orange {
+  border-color: #eea812;
+}
+
+.average-green {
+  border-color: #4fd64f;
 }

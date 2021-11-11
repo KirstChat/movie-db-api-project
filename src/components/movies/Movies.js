@@ -4,19 +4,17 @@ import MovieItem from './MovieItem';
 import PropTypes from 'prop-types';
 import SearchFilters from './SearchFilters';
 
-const Movies = ({ movies, error, filterMovies}) => {
+const Movies = ({ movies, filterMovies}) => {
   return (
     <main className='container'>
+      <div className="filters">
       <SearchFilters filterMovies={filterMovies}/>
-      {!error ? (
-        <div className='container__cards'>
+      </div>
+      <div className='cards'>
           {movies.map((movie) => (
             <MovieItem key={movie.id} movie={movie} />
           ))}
         </div>
-      ) : (
-        <div className='error'>{error}</div>
-      )}
     </main>
   );
 };
