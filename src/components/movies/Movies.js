@@ -2,10 +2,12 @@ import React from 'react';
 import './Movies.css';
 import MovieItem from './MovieItem';
 import PropTypes from 'prop-types';
+import SearchFilters from './SearchFilters';
 
-const Movies = ({ movies, error }) => {
+const Movies = ({ movies, error, filterMovies}) => {
   return (
     <main className='container'>
+      <SearchFilters filterMovies={filterMovies}/>
       {!error ? (
         <div className='container__cards'>
           {movies.map((movie) => (

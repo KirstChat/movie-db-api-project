@@ -31,7 +31,7 @@ const ProviderFilter = ({setProvider, customStyles, animatedSelect}) =>  {
         components={animatedSelect}
         onChange={setProvider} 
         options={providerOptions} 
-        placeholder="Select a streaming service..."
+        placeholder="Select a provider..."
       />
   )
 }
