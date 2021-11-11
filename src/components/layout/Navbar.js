@@ -1,3 +1,4 @@
+import React from 'react';
 import './Navbar.css';
 import axios from 'axios';
 import Search from '../search/Search';

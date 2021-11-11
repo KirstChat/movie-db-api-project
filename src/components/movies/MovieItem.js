@@ -1,3 +1,4 @@
+import React from 'react';
 import './MovieItem.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';

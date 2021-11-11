@@ -1,3 +1,4 @@
+import React from 'react';
 import './Search.css';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
