@@ -1,6 +1,7 @@
 import './Movie.css';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import voteAverageColor from '../Utils';
 
 const Movie = ({ movie, getMovieDetails, cast, getCast, match }) => {
   useEffect(() => {
@@ -10,28 +11,6 @@ const Movie = ({ movie, getMovieDetails, cast, getCast, match }) => {
   }, []);
 
   const IMG_PATH = 'https://image.tmdb.org/t/p/w500';
-
-  const voteAverageColor = () => {
-    if (movie.vote_count === 0) {
-      return <span className='average'>--</span>;
-    } else if (movie.vote_average <= 4.9) {
-      return (
-        <span className='average average-red'>{movie.vote_average * 10}%</span>
-      );
-    } else if (movie.vote_average <= 6.9) {
-      return (
-        <span className='average average-orange'>
-          {movie.vote_average * 10}%
-        </span>
-      );
-    } else {
-      return (
-        <span className='average average-green'>
-          {movie.vote_average * 10}%
-        </span>
-      );
-    }
-  };
 
   const topBilledCast = cast.slice(0, 6);
 
@@ -56,7 +35,7 @@ const Movie = ({ movie, getMovieDetails, cast, getCast, match }) => {
           <p>{movie.runtime} Minutes</p>
           <div className='movie-average'>
             <h4>User Score</h4>
-            {voteAverageColor()}
+            {voteAverageColor(movie.vote_average, movie.vote_count)}
           </div>
         </div>
       </div>
