@@ -1,12 +1,37 @@
+.wrapper{
+  display: grid;
+  grid-template-columns: 12fr;
+}
+
+
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.error {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+@media screen and (min-width: 450px) {
+  .wrapper{
+    grid-template-columns: 10fr;
+  }
 }
+
+@media screen and (min-width: 600px) {
+  .wrapper{
+    grid-template-columns: 6fr 6fr;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .wrapper{
+    grid-template-columns: 5fr 7fr;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .wrapper{
+    grid-template-columns: 4fr 8fr;
+  }
+}
+
+
