@@ -1,6 +1,6 @@
 import './Navbar.css';
 import axios from 'axios';
-import Search from '../movies/Search';
+import Search from '../search/Search';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 

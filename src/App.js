@@ -1,9 +1,8 @@
 import React from 'react';
 import Navbar from './components/layout/Navbar';
-// import Search from './components/movies/Search';
 import Movies from './components/movies/Movies';
 import Movie from './components/movies/Movie';
-import SearchFilters from './components/movies/SearchFilters';
+import SearchFilters from './components/search/SearchFilters';
 import Footer from './components/layout/Footer';
 import axios from 'axios';
 import './App.css';
@@ -14,10 +13,9 @@ const App = () => {
   const [movies, setMovies] = useState([]);
   const [movie, setMovie] = useState({});
   const [cast, setCast] = useState([]);
-  // const [search, setSearch] = useState([]);
   const [error, setError] = useState(null);
 
-  // Set Top 20 Trending Movies
+  // Set Top 20 Trending Movies on Load
   useEffect(() => {
     const getMovies = async () => {
       try {
@@ -41,7 +39,7 @@ const App = () => {
     setMovie(res.data);
   };
 
-  // Get Cast
+  // Get Cast Details
   const getCast = async (id) => {
     const res = await axios.get(
       `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}`
@@ -50,7 +48,7 @@ const App = () => {
     setCast(res.data.cast);
   };
 
-  // Movie Genres
+  // Filter Movie Genres
   const searchMovieGenres = async (genreStr, providerStr, certificationStr) => {
     const res = await axios.get(
       `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&&page=1&with_genres=${genreStr}&watch_region=GB&with_watch_providers=${providerStr}&certification=${certificationStr}`
@@ -68,7 +66,6 @@ const App = () => {
               <SearchFilters searchMovieGenres={searchMovieGenres} />
               <Movies movies={movies} error={error} />
             </Route>
-            {/* <Route exact path='/search/:text' component={Search} /> */}
             <Route
               exact
               path='/movie/:id'
