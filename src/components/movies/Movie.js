@@ -2,6 +2,7 @@ import './Movie.css';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import voteAverageColor from '../Utils';
+import PropTypes from 'prop-types';
 
 const Movie = ({ movie, getMovieDetails, cast, getCast, match }) => {
   useEffect(() => {
@@ -22,7 +23,11 @@ const Movie = ({ movie, getMovieDetails, cast, getCast, match }) => {
       <div className='container__movie-details'>
         <img
           className='movie-details__img'
-          src={IMG_PATH + movie.poster_path}
+          src={
+            movie.poster_path
+              ? IMG_PATH + movie.poster_path
+              : 'https://via.placeholder.com/280x420?text=No+Image+Found'
+          }
           alt={movie.title + ' Poster'}
         />
         <div className='movie-details'>
@@ -47,7 +52,11 @@ const Movie = ({ movie, getMovieDetails, cast, getCast, match }) => {
             <div key={cast.id} cast={cast}>
               <img
                 className='cast-details__img'
-                src={IMG_PATH + cast.profile_path}
+                src={
+                  cast.profile_path
+                    ? IMG_PATH + cast.profile_path
+                    : 'https://via.placeholder.com/280x420?text=No+Image+Found'
+                }
                 alt={'Photo of ' + cast.name}
               />
               <div className='cast-details__text'>
@@ -60,6 +69,13 @@ const Movie = ({ movie, getMovieDetails, cast, getCast, match }) => {
       </div>
     </div>
   );
+};
+
+Movie.propTypes = {
+  movie: PropTypes.object.isRequired,
+  getMovieDetails: PropTypes.func.isRequired,
+  cast: PropTypes.array.isRequired,
+  getCast: PropTypes.func.isRequired,
 };
 
 export default Movie;

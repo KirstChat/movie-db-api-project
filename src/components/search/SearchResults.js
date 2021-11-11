@@ -1,4 +1,5 @@
 import MovieItem from '../movies/MovieItem';
+import PropTypes from 'prop-types';
 
 const SearchResults = ({ searchResults }) => {
   return (
@@ -10,6 +11,10 @@ const SearchResults = ({ searchResults }) => {
       </div>
     </main>
   );
+};
+
+SearchResults.propTypes = {
+  searchResults: PropTypes.array.isRequired,
 };
 
 export default SearchResults;

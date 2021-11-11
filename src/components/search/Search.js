@@ -11,7 +11,6 @@ const Search = ({ searchMovies }) => {
     e.preventDefault();
     searchMovies(text);
     setText('');
-    console.log(text);
     history.push('/search');
   };
 

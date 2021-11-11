@@ -52,3 +52,5 @@ To add your own TMDB API Key, follow these steps:
 - [Get Requests in React using Async/Await](https://dev.to/redeyemedia/get-requests-in-react-using-async-await-7jd)
 - [Text Gradient with Font Awesome](https://stackoverflow.com/questions/12732663/text-gradient-with-font-awesome)
 - [useHistory Hook](https://v5.reactrouter.com/web/api/Hooks)
+- [Utils.js](https://stackoverflow.com/questions/32888728/correct-way-to-share-functions-between-components-in-react)
+- [Placeholder Image](https://placeholder.com/)
