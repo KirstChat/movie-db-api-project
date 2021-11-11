@@ -43,7 +43,11 @@ const SearchFilters = (props) => {
     for (let i = 0; i < certification.length; i++) {
       certificationStr += `${certification[i].value},`;
     }
-    props.searchMovieGenres(genreStr, providerStr, certificationStr);
+    props.filterMovies(genreStr, providerStr, certificationStr);
+
+    setGenre([]);
+    setProvider([]);
+    setCertification([]);
   };
 
   return (
