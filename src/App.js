@@ -45,11 +45,12 @@ const App = () => {
     setCast(res.data.cast);
   };
 
-  // Filter Movie Genres
+  // Filter Movies
   const searchMovieGenres = async (genreStr, providerStr, certificationStr) => {
     const res = await axios.get(
       `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&&page=1&with_genres=${genreStr}&watch_region=GB&with_watch_providers=${providerStr}&certification=${certificationStr}`
     );
+
     setMovies(res.data.results);
   };
 

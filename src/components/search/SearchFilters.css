@@ -26,7 +26,7 @@
   color: var(--primary-color);
 }
 
-/* .btn-search {
+.btn-search {
   background: var(--secondary-color);
   border-color: var(--secondary-color);
   color: #f1f1f1;
@@ -36,8 +36,8 @@
   font-size: 1rem;
   cursor: pointer;
   font-weight: 700;
-} */
+}
 
-/* input.btn.btn-search:hover {
+input.btn.btn-search:hover {
   background-color: var(--primary-color);
-} */
+}

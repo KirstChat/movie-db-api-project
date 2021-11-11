@@ -64,7 +64,7 @@ const SearchFilters = (props) => {
         animatedSelect={animatedSelect}
         setCertification={setCertification}
       />
-      <input type='Submit' className='btn-gradient' />
+      <input type='Submit' className='btn btn-search' />
     </form>
   );
 };

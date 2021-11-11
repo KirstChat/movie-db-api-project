@@ -3,13 +3,17 @@ import PropTypes from 'prop-types';
 
 const SearchResults = ({ searchResults }) => {
   return (
-    <main>
-      <div className='cards'>
-        {searchResults.map((result) => (
+    <div className='cards'>
+      {searchResults.length > 0 ? (
+        searchResults.map((result) => (
           <MovieItem key={result.id} movie={result} />
-        ))}
-      </div>
-    </main>
+        ))
+      ) : (
+        <h3 className='search__error'>
+          We couldn't find any movies with that name.
+        </h3>
+      )}
+    </div>
   );
 };
 
