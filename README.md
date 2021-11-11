@@ -42,3 +42,4 @@ To add your own TMDB API Key, follow these steps:
 - [useFetch Component](https://www.youtube.com/watch?v=j942wKiXFu8&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&index=1)
 -[SearchFilter Component](https://www.youtube.com/watch?v=n02t9wvd6hs)
 -[Importing Select options from API](https://medium.com/how-to-react/react-select-dropdown-tutorial-using-react-select-51664ab8b6f3)
+-[Getting Started with react-select](https://www.youtube.com/watch?v=n02t9wvd6hs)
