@@ -48,7 +48,7 @@ const SearchFilters = (props) => {
 
   return (
     <form onSubmit={onSubmit} className='filter-form'>
-      <h1>Search Filter</h1>
+      <h2>Filter Movies</h2>
       <GenreFilter
         customStyles={customStyles}
         animatedSelect={animatedSelect}
@@ -64,7 +64,7 @@ const SearchFilters = (props) => {
         animatedSelect={animatedSelect}
         setCertification={setCertification}
       />
-      <input type='Submit' className='btn btn-search' />
+      <input type='Submit' className='btn-gradient' />
     </form>
   );
 };

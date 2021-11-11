@@ -4,12 +4,12 @@ import Search from '../search/Search';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const Navbar = ({ icon, title, setMovies }) => {
+const Navbar = ({ icon, title, setSearchResults }) => {
   const searchMovies = async (text) => {
     const res = await axios.get(
       `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${text}`
     );
-    setMovies(res.data.results);
+    setSearchResults(res.data.results);
   };
 
   return (

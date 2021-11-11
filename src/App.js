@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/layout/Navbar';
 import Movies from './components/movies/Movies';
 import Movie from './components/movies/Movie';
+import SearchResults from './components/search/SearchResults';
 import SearchFilters from './components/search/SearchFilters';
 import Footer from './components/layout/Footer';
 import axios from 'axios';
@@ -13,19 +14,15 @@ const App = () => {
   const [movies, setMovies] = useState([]);
   const [movie, setMovie] = useState({});
   const [cast, setCast] = useState([]);
-  const [error, setError] = useState(null);
+  const [searchResults, setSearchResults] = useState([]);
 
   // Set Top 20 Trending Movies on Load
   useEffect(() => {
     const getMovies = async () => {
-      try {
-        const res = await axios.get(
-          `https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.REACT_APP_API_KEY}`
-        );
-        setMovies(res.data.results);
-      } catch (err) {
-        setError(`Oh no! Something went wrong: ${err.message}`);
-      }
+      const res = await axios.get(
+        `https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.REACT_APP_API_KEY}`
+      );
+      setMovies(res.data.results);
     };
     getMovies();
   }, []);
@@ -59,13 +56,20 @@ const App = () => {
   return (
     <Router>
       <div className='App'>
-        <Navbar setMovies={setMovies} />
+        <Navbar setSearchResults={setSearchResults} />
         <main className='content'>
           <Switch>
             <Route exact path='/'>
               <SearchFilters searchMovieGenres={searchMovieGenres} />
-              <Movies movies={movies} error={error} />
+              <Movies movies={movies} />
             </Route>
+            <Route
+              exact
+              path='/search'
+              render={(props) => (
+                <SearchResults {...props} searchResults={searchResults} />
+              )}
+            />
             <Route
               exact
               path='/movie/:id'

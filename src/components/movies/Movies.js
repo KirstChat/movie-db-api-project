@@ -2,18 +2,14 @@ import './Movies.css';
 import MovieItem from './MovieItem';
 import PropTypes from 'prop-types';
 
-const Movies = ({ movies, error }) => {
+const Movies = ({ movies }) => {
   return (
     <main>
-      {!error ? (
-        <div className='cards'>
-          {movies.map((movie) => (
-            <MovieItem key={movie.id} movie={movie} />
-          ))}
-        </div>
-      ) : (
-        <div className='error'>{error}</div>
-      )}
+      <div className='cards'>
+        {movies.map((movie) => (
+          <MovieItem key={movie.id} movie={movie} />
+        ))}
+      </div>
     </main>
   );
 };
