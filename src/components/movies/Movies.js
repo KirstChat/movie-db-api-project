@@ -4,7 +4,7 @@ import MovieItem from './MovieItem';
 import PropTypes from 'prop-types';
 import SearchFilters from '../search/SearchFilters';
 
-const Movies = ({ movies, filterMovies}) => {
+const Movies = ({ movies, filterMovies }) => {
   return (
     <div className='wrapper'>
       <div className='filters'>

@@ -10,16 +10,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Features
 
-### Existing Features
-
 - View the top 20 trending movies
 - Filter movies by certification, genre and streaming service
 - Search for movies
 - View movie details including title, overview, release date, runtime, user score and top billed cast
-
-### Features Left to be Implemented
-
--
 
 ## Cloning the Repository
 
@@ -52,9 +46,9 @@ To add your own TMDB API Key, follow these steps:
 - [How to use Axios with React](https://www.freecodecamp.org/news/how-to-use-axios-with-react/)
 - [Get Requests in React using Async/Await](https://dev.to/redeyemedia/get-requests-in-react-using-async-await-7jd)
 - [Text Gradient with Font Awesome](https://stackoverflow.com/questions/12732663/text-gradient-with-font-awesome)
--[SearchFilter Component](https://www.youtube.com/watch?v=n02t9wvd6hs)
--[Importing Select options from API](https://medium.com/how-to-react/react-select-dropdown-tutorial-using-react-select-51664ab8b6f3)
--[Getting Started with react-select](https://www.youtube.com/watch?v=n02t9wvd6hs)
+- [SearchFilter Component](https://www.youtube.com/watch?v=n02t9wvd6hs)
+- [Importing Select options from API](https://medium.com/how-to-react/react-select-dropdown-tutorial-using-react-select-51664ab8b6f3)
+- [Getting Started with react-select](https://www.youtube.com/watch?v=n02t9wvd6hs)
 - [useHistory Hook](https://v5.reactrouter.com/web/api/Hooks)
 - [Utils.js](https://stackoverflow.com/questions/32888728/correct-way-to-share-functions-between-components-in-react)
 - [Placeholder Image](https://placeholder.com/)
