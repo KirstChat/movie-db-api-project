@@ -1,5 +1,4 @@
 .filter-form {
-  width: 75%;
   color: var(--primary-color);
   padding: 2rem;
   font-family: inherit;
@@ -14,16 +13,7 @@
 }
 
 .select-options {
-  /* padding-bottom: 2rem; */
   width: 100%;
-}
-
-.select-option:hover {
-  background-color: var(--primary-color);
-}
-
-.genre-select {
-  color: var(--primary-color);
 }
 
 .btn-search {
