@@ -3,10 +3,3 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-
-.error {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
