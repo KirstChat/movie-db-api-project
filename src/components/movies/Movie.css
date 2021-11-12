@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  width: 90%;
 }
 
 .btn-back {
@@ -27,7 +28,7 @@
   justify-content: space-evenly;
   height: 420px;
   width: calc(100% - 280px);
-  padding: 1rem 2rem;
+  padding: 2rem;
 }
 
 .movie-average {
@@ -62,4 +63,16 @@
 
 .cast-details__text {
   max-width: 125px;
+}
+
+@media (max-width: 875px) {
+  .movie-details {
+    width: 100%;
+    height: auto;
+    padding: 2rem 0.5rem;
+  }
+
+  .movie-details__img {
+    width: 100%;
+  }
 }
