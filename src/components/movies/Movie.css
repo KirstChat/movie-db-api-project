@@ -63,9 +63,3 @@
 .cast-details__text {
   max-width: 125px;
 }
-
-@media (max-width: 767px) {
-  .movie-details {
-    width: 100%;
-  }
-}

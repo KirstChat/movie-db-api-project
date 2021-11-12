@@ -10,16 +10,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Features
 
-### Existing Features
-
 - View the top 20 trending movies
 - Filter movies by certification, genre and streaming service
 - Search for movies
 - View movie details including title, overview, release date, runtime, user score and top billed cast
-
-### Features Left to be Implemented
-
--
 
 ## Cloning the Repository
 
