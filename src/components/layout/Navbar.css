@@ -27,3 +27,21 @@
   -webkit-text-fill-color: transparent;
   margin-right: 0.5rem;
 }
+
+/* Media Queries */
+
+@media (max-width: 395px) {
+  .navbar__heading {
+    text-align: center;
+  }
+  .navbar__heading i {
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+}
+
+@media (max-width: 672px) {
+  .navbar {
+    justify-content: center;
+  }
+}

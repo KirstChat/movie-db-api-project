@@ -14,3 +14,17 @@
 .search__form input[type='text']:focus {
   outline: 2px solid var(--tertiary-color);
 }
+
+/* Media Queries */
+
+@media (max-width: 395px) {
+  .search__form input[type='text'] {
+    width: 10rem;
+  }
+}
+
+@media (max-width: 672px) {
+  .search__form {
+    margin-top: 1rem;
+  }
+}

@@ -1,13 +1,13 @@
 .container {
   display: flex;
   flex-direction: column;
-  width: 80%;
 }
 
 .btn-back {
-  width: 100px;
-  margin-bottom: 1rem;
+  text-align: center;
   text-decoration: none;
+  margin-bottom: 1rem;
+  width: 8rem;
 }
 
 .container__movie-details {
@@ -42,7 +42,7 @@
 .container__cast-details {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
+  margin: 1.5rem 0;
 }
 
 .container__cast-details h2 {
@@ -52,7 +52,7 @@
 .cast-details {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .cast-details__img {
@@ -62,10 +62,4 @@
 
 .cast-details__text {
   max-width: 125px;
-}
-
-@media (max-width: 767px) {
-  .movie-details {
-    width: 100%;
-  }
 }
